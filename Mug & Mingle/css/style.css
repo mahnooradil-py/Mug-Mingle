@@ -1,0 +1,419 @@
+body {
+    font-family: sans-serif;
+    background-color: #d6c5b9;
+    line-height: 1.4; /* Improve readability by increasing line height */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+/* Headings */
+/* Style for headings (h1 and h2), including font, colour, and spacing */
+h1,
+h2 {
+    font-family: sans-serif;
+    color: #fff;
+    margin-bottom: 1rem; /* Add spacing below headings */
+    font-size: 1.6rem; /* Set consistent font size for headings */
+    font-weight: bold; /* Make headings bold */
+    text-align: center;
+}
+
+/* Links */
+a {
+    text-decoration: none; /*Style for all links to remove underlines */
+}
+
+/* Layout Container */
+/* Define a grid layout for the page's container with header, main content, and footer sections */
+.container {
+    display: grid; /* Use CSS grid for layout */
+    grid-template-areas:
+        "header" /* Header occupies the top row */
+        "main" /* Main content takes the middle row */
+        "footer"; /* Footer occupies the bottom row */
+    grid-template-columns: 1fr; /* Single column layout */
+    grid-template-rows: auto 1fr auto; /* Header and footer size adjusts automatically */
+    gap: 20px;
+    max-width: 1200px; /* Limit the container's width */
+    margin: 0 auto; /* Centre the container horizontally */
+    padding: 20px; /* Add padding inside the container */
+    /* Dynamically calculates the height of an element based on the viewport's height, minus a fixed value of 40 pixels. */
+    height: calc(100vh - 40px); 
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: flex-end; /* Align content at the bottom of the container */
+    padding: 10px 20px; /* Add padding inside the header */
+    background-color: #b4794e;
+}
+
+/* Style the logo container to centre its contents */
+.logo-container {
+    display: flex;
+    flex-direction: column;  /* Stack items vertically */
+    align-items: center;
+}
+
+.logo-container img {
+    margin-bottom: 5px; /* Add spacing below the image */
+}
+
+.logo-text {
+    font-size: 1.6rem;
+    font-weight: bold;
+    white-space: nowrap; /* Prevent text from wrapping */
+    color: #0f0e0e;
+}
+
+/* Style for navigation menu inside the header */
+.nav {
+    display: flex; /* Use flexbox for horizontal layout */
+    gap: 20px; /* Space between navigation links */
+    margin-left: auto; /* Push navigation to the right */
+}
+
+/* Style for navigation links */
+.nav a {
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth colour transition on hover */
+    font-size: 1.2rem;
+}
+
+/* Change link colour on hover */
+.nav a:hover {
+    color: #39332c;
+}
+
+.nav a.current {
+    color: yellow;
+}
+
+/* Main Content */
+.main {
+    grid-area: main;
+    display: grid;
+    grid-template-rows: auto auto 1fr; /* Define rows for content */
+    gap: 20px;
+}
+
+/* Style for the hero section at the top of the main content */
+.hero {
+    background-color: #8b4513;
+    text-align: center;
+    font-size: 1.6rem;
+    width: 100%; /* Make the hero section full-width */
+}
+
+.hero p {
+    font-size: 1.2rem; /* Slightly smaller text for paragraphs */
+    color: white;
+}
+
+.content {
+    display: flex;  /* Use flexbox for layout */
+    gap: 20px;
+
+}
+
+/* Individual article styling */
+.content article {
+    flex: 1 1 calc(25% - 20px); /* Responsive sizing for articles */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #baced4;
+    text-align: justify; /* Justify text for cleaner appearance */
+}
+
+
+.shaped article,
+.content>article>section {
+    padding: 20px;
+    border: 3px solid #fff; /* White border */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    text-align: center;
+
+}
+
+/* Image styles within a figure element */
+figure img {
+    max-width: 100%; /* Ensure images are responsive */
+    width: 290px; /* Set specific width */
+    height: 290px; /* Set specific height */
+    object-fit: cover;  /* Maintain aspect ratio and fill the area */
+}
+
+.content p,
+h2 {
+    color: #0f0e0e;
+}
+
+/* Circular image styling for shaped sections */
+.shaped img {
+    float: left; /* Float image to the left */
+    margin: 20px; /* Add spacing around the image */
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%; /* Make image circular */
+}
+
+/* Product Grid */
+/* Defines the layout for the product grid, using a flexible row layout with wrapping. */
+.product-grid {
+    display: flex; /* Creates a flexible container. */
+    gap: 20px;
+    flex-wrap: wrap; /* Allows elements to wrap onto multiple rows if necessary. */
+}
+
+.product {
+    flex: 1 1 calc(25% - 20px); /* Each product takes up roughly 25% of the row, minus the gap. */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #baced4;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px; /* Adds internal spacing within the card. */
+    text-align: center;
+}
+
+/* Styles for images within product cards. */
+.product-image img {
+    max-width: 100%; /* Ensures the image does not exceed the container's width. */
+    height: 400px;
+}
+
+/* Styles for product title within the information section. */
+.product-info h2 {
+    font-size: 1.4rem;
+    color: #8b4513;
+}
+
+.product-info h3 {
+    color: #0f0e0e;
+}
+
+/* Styles for product descriptions. */
+.product-info p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Menu */
+/* Styles the menu bar across the page. */
+.menu {
+    background-color: #8b4513;
+    text-align: center;
+    font-size: 1.6rem;
+    width: 100%;
+}
+/* Style for skip links */
+.skip-links {
+    background-color: #d6c5b9; /* Background color to match your site's design */
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.skip-link {
+    display: inline-block;
+    margin: 0 10px;
+    color: #8b4513; /* Link color */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.skip-link:hover,
+.skip-link:focus {
+    text-decoration: underline;
+}
+
+
+/* About us page*/
+.Story {
+    padding: 15px;
+    border: 3px solid #fff;
+}
+
+.p {
+    text-align: center;
+
+}
+/* Ensures images are centrally aligned on the page. */
+img {
+    display: block; /* Displays images as block elements. */
+    margin: 0 auto; /* Centres the image horizontally. */
+}
+
+/* Time Section */
+.Time h3,
+h4,
+li {
+    color: #000;
+    /* Change font color to black */
+}
+
+/* Events List */
+.events-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+/* Styles for individual event items. */
+.event {
+    background-color: #baced4;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Centres embedded iframes within events. */
+.event iframe {
+    display: block;
+    margin: 0 auto;
+}
+
+.event p {
+    color: #0f0e0e;
+}
+
+/* Contact Form */
+.contact-form {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-form label {
+    font-size: 1rem;
+    color: #8b4513;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px; /* Rounds the corners slightly. */
+    font-size: 1rem;
+}
+
+/* Styles the submit button. */
+.contact-form button {
+    padding: 10px;
+    background-color: #8b4513;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer; /* Changes the cursor to a pointer on hover. */
+}
+
+/* Changes button colour on hover for feedback. */
+.contact-form button:hover {
+    background-color: #cd853f;
+}
+
+/* Contact Info */
+.contact-info {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.contact-info h2 {
+    font-size: 1.4rem;
+    color: #8b4513;
+    text-align: left;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Footer */
+/* Styles the footer section at the bottom of the page. */
+.footer {
+    grid-area: footer;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+}
+
+/* Responsive Design */
+/* Adjust article and product layout for smaller screens */
+@media (max-width: 992px) {
+
+    .content article,
+    .product {
+        flex: 1 1 calc(50% - 20px); /* Two columns on medium screens */
+    }
+}
+
+/* Stack content vertically for smaller screens */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;  /* Stack articles vertically */
+    }
+
+    .content article,
+    .product {
+        flex: 1 1 100%; /* Full-width articles */
+    }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 576px) {
+    .header {
+        flex-direction: column; /* Stack header items */
+        align-items: center; /* Centre-align header content */
+    }
+
+    .nav {
+        flex-direction: column; /* Stack navigation links vertically */
+        gap: 10px; /* Smaller gap for compact layout */
+    }
+
+    .hero {
+        font-size: 1.2rem;  /* Reduce font size */
+    }
+
+    .hero p {
+        font-size: 1rem;  /* Smaller paragraph text */
+    }
+
+    /* Adjust form element sizes for smaller screens */
+    .contact-form form {
+        gap: 5px; /* Reduce spacing */
+    }
+
+    .contact-form label,
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+        font-size: 0.9rem; /* Smaller font size for inputs */
+    }
+
+    .contact-info h2 {
+        font-size: 1.2rem; /* Reduce heading size */
+    }
+
+    .contact-info p {
+        font-size: 0.9rem; /* Smaller text size */
+    }
+}
+

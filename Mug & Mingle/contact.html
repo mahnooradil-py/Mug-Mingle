@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Mug and Mingle</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="images/coffee-cup-logo.jpg" sizes="32x32">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo-container">
+                <img src="images/coffee-logo.png" width="150" alt="Mug and Mingle Logo">
+                <div class="logo-text">Mug and Mingle</div>
+            </div>
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="menu.html">Menu</a>
+                <a href="events.html">Events</a>
+                <a href="contact.html" class="current" aria-current="contact">Contact Us</a>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main">
+            <section class="hero">
+                <h1>Contact Us</h1>
+                <p>We'd love to hear from you! Whether you have a question, feedback, or just want to say hello, feel
+                    free to reach out to us.</p>
+            </section>
+
+            <section class="contact-form">
+                <form action="submit_form.php" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" placeholder="Enter your full name">
+
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="Enter your full email address">
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" placeholder="Type in your message" rows="5" required></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+
+            <section class="contact-info">
+                <h2>Our Location</h2>
+                <p>123 Coffee Street, Oxford, UK</p>
+                <h2>Phone</h2>
+                <p>+44 1234 567890</p>
+                <h2>Email</h2>
+                <p>info@mugandmingle.com</p>
+                <h2>Follow Us</h2>
+                <p>
+                    <a href="https://www.facebook.com/mugandmingle">Facebook</a> |
+                    <a href="https://www.twitter.com/mugandmingle">Twitter</a> |
+                    <a href="https://www.instagram.com/mugandmingle">Instagram</a>
+                </p>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 Mug and Mingle. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
